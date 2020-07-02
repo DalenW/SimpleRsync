@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD31C32224AD70750087C210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31C32124AD70750087C210 /* AppDelegate.swift */; };
+		FD31C32424AD70750087C210 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31C32324AD70750087C210 /* ContentView.swift */; };
+		FD31C32724AD70750087C210 /* Simple_Rsync.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD31C32524AD70750087C210 /* Simple_Rsync.xcdatamodeld */; };
+		FD31C32924AD70780087C210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD31C32824AD70780087C210 /* Assets.xcassets */; };
+		FD31C32C24AD70780087C210 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD31C32B24AD70780087C210 /* Preview Assets.xcassets */; };
+		FD31C32F24AD70780087C210 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD31C32D24AD70780087C210 /* Main.storyboard */; };
+		FD31C33B24AD70780087C210 /* Simple_RsyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31C33A24AD70780087C210 /* Simple_RsyncTests.swift */; };
+		FD31C34624AD70780087C210 /* Simple_RsyncUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31C34524AD70780087C210 /* Simple_RsyncUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD31C33724AD70780087C210 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD31C31624AD70750087C210 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD31C31D24AD70750087C210;
+			remoteInfo = "Simple Rsync";
+		};
+		FD31C34224AD70780087C210 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD31C31624AD70750087C210 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD31C31D24AD70750087C210;
+			remoteInfo = "Simple Rsync";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FD31C31E24AD70750087C210 /* Simple Rsync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Rsync.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD31C32124AD70750087C210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD31C32324AD70750087C210 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FD31C32624AD70750087C210 /* Simple_Rsync.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Simple_Rsync.xcdatamodel; sourceTree = "<group>"; };
+		FD31C32824AD70780087C210 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD31C32B24AD70780087C210 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FD31C32E24AD70780087C210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FD31C33024AD70780087C210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD31C33124AD70780087C210 /* Simple_Rsync.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Simple_Rsync.entitlements; sourceTree = "<group>"; };
+		FD31C33624AD70780087C210 /* Simple RsyncTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple RsyncTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD31C33A24AD70780087C210 /* Simple_RsyncTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_RsyncTests.swift; sourceTree = "<group>"; };
+		FD31C33C24AD70780087C210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD31C34124AD70780087C210 /* Simple RsyncUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple RsyncUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD31C34524AD70780087C210 /* Simple_RsyncUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_RsyncUITests.swift; sourceTree = "<group>"; };
+		FD31C34724AD70780087C210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD31C31B24AD70750087C210 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD31C33324AD70780087C210 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD31C33E24AD70780087C210 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD31C31524AD70750087C210 = {
+			isa = PBXGroup;
+			children = (
+				FD31C32024AD70750087C210 /* Simple Rsync */,
+				FD31C33924AD70780087C210 /* Simple RsyncTests */,
+				FD31C34424AD70780087C210 /* Simple RsyncUITests */,
+				FD31C31F24AD70750087C210 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD31C31F24AD70750087C210 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD31C31E24AD70750087C210 /* Simple Rsync.app */,
+				FD31C33624AD70780087C210 /* Simple RsyncTests.xctest */,
+				FD31C34124AD70780087C210 /* Simple RsyncUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD31C32024AD70750087C210 /* Simple Rsync */ = {
+			isa = PBXGroup;
+			children = (
+				FD31C32124AD70750087C210 /* AppDelegate.swift */,
+				FD31C32324AD70750087C210 /* ContentView.swift */,
+				FD31C32824AD70780087C210 /* Assets.xcassets */,
+				FD31C32D24AD70780087C210 /* Main.storyboard */,
+				FD31C33024AD70780087C210 /* Info.plist */,
+				FD31C33124AD70780087C210 /* Simple_Rsync.entitlements */,
+				FD31C32524AD70750087C210 /* Simple_Rsync.xcdatamodeld */,
+				FD31C32A24AD70780087C210 /* Preview Content */,
+			);
+			path = "Simple Rsync";
+			sourceTree = "<group>";
+		};
+		FD31C32A24AD70780087C210 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FD31C32B24AD70780087C210 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FD31C33924AD70780087C210 /* Simple RsyncTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD31C33A24AD70780087C210 /* Simple_RsyncTests.swift */,
+				FD31C33C24AD70780087C210 /* Info.plist */,
+			);
+			path = "Simple RsyncTests";
+			sourceTree = "<group>";
+		};
+		FD31C34424AD70780087C210 /* Simple RsyncUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FD31C34524AD70780087C210 /* Simple_RsyncUITests.swift */,
+				FD31C34724AD70780087C210 /* Info.plist */,
+			);
+			path = "Simple RsyncUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD31C31D24AD70750087C210 /* Simple Rsync */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD31C34A24AD70780087C210 /* Build configuration list for PBXNativeTarget "Simple Rsync" */;
+			buildPhases = (
+				FD31C31A24AD70750087C210 /* Sources */,
+				FD31C31B24AD70750087C210 /* Frameworks */,
+				FD31C31C24AD70750087C210 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Simple Rsync";
+			productName = "Simple Rsync";
+			productReference = FD31C31E24AD70750087C210 /* Simple Rsync.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FD31C33524AD70780087C210 /* Simple RsyncTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD31C34D24AD70780087C210 /* Build configuration list for PBXNativeTarget "Simple RsyncTests" */;
+			buildPhases = (
+				FD31C33224AD70780087C210 /* Sources */,
+				FD31C33324AD70780087C210 /* Frameworks */,
+				FD31C33424AD70780087C210 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD31C33824AD70780087C210 /* PBXTargetDependency */,
+			);
+			name = "Simple RsyncTests";
+			productName = "Simple RsyncTests";
+			productReference = FD31C33624AD70780087C210 /* Simple RsyncTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FD31C34024AD70780087C210 /* Simple RsyncUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD31C35024AD70780087C210 /* Build configuration list for PBXNativeTarget "Simple RsyncUITests" */;
+			buildPhases = (
+				FD31C33D24AD70780087C210 /* Sources */,
+				FD31C33E24AD70780087C210 /* Frameworks */,
+				FD31C33F24AD70780087C210 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD31C34324AD70780087C210 /* PBXTargetDependency */,
+			);
+			name = "Simple RsyncUITests";
+			productName = "Simple RsyncUITests";
+			productReference = FD31C34124AD70780087C210 /* Simple RsyncUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD31C31624AD70750087C210 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = m6securities;
+				TargetAttributes = {
+					FD31C31D24AD70750087C210 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					FD31C33524AD70780087C210 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = FD31C31D24AD70750087C210;
+					};
+					FD31C34024AD70780087C210 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = FD31C31D24AD70750087C210;
+					};
+				};
+			};
+			buildConfigurationList = FD31C31924AD70750087C210 /* Build configuration list for PBXProject "Simple Rsync" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD31C31524AD70750087C210;
+			productRefGroup = FD31C31F24AD70750087C210 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD31C31D24AD70750087C210 /* Simple Rsync */,
+				FD31C33524AD70780087C210 /* Simple RsyncTests */,
+				FD31C34024AD70780087C210 /* Simple RsyncUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD31C31C24AD70750087C210 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD31C32F24AD70780087C210 /* Main.storyboard in Resources */,
+				FD31C32C24AD70780087C210 /* Preview Assets.xcassets in Resources */,
+				FD31C32924AD70780087C210 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD31C33424AD70780087C210 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD31C33F24AD70780087C210 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD31C31A24AD70750087C210 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD31C32424AD70750087C210 /* ContentView.swift in Sources */,
+				FD31C32224AD70750087C210 /* AppDelegate.swift in Sources */,
+				FD31C32724AD70750087C210 /* Simple_Rsync.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD31C33224AD70780087C210 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD31C33B24AD70780087C210 /* Simple_RsyncTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD31C33D24AD70780087C210 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD31C34624AD70780087C210 /* Simple_RsyncUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD31C33824AD70780087C210 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD31C31D24AD70750087C210 /* Simple Rsync */;
+			targetProxy = FD31C33724AD70780087C210 /* PBXContainerItemProxy */;
+		};
+		FD31C34324AD70780087C210 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD31C31D24AD70750087C210 /* Simple Rsync */;
+			targetProxy = FD31C34224AD70780087C210 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FD31C32D24AD70780087C210 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD31C32E24AD70780087C210 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD31C34824AD70780087C210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FD31C34924AD70780087C210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		FD31C34B24AD70780087C210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Simple Rsync/Simple_Rsync.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Simple Rsync/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Simple Rsync/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.m6securities.Simple-Rsync";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FD31C34C24AD70780087C210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Simple Rsync/Simple_Rsync.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Simple Rsync/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Simple Rsync/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.m6securities.Simple-Rsync";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FD31C34E24AD70780087C210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Simple RsyncTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.m6securities.Simple-RsyncTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simple Rsync.app/Contents/MacOS/Simple Rsync";
+			};
+			name = Debug;
+		};
+		FD31C34F24AD70780087C210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Simple RsyncTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.m6securities.Simple-RsyncTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simple Rsync.app/Contents/MacOS/Simple Rsync";
+			};
+			name = Release;
+		};
+		FD31C35124AD70780087C210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Simple RsyncUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.m6securities.Simple-RsyncUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Simple Rsync";
+			};
+			name = Debug;
+		};
+		FD31C35224AD70780087C210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Simple RsyncUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.m6securities.Simple-RsyncUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Simple Rsync";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD31C31924AD70750087C210 /* Build configuration list for PBXProject "Simple Rsync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD31C34824AD70780087C210 /* Debug */,
+				FD31C34924AD70780087C210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD31C34A24AD70780087C210 /* Build configuration list for PBXNativeTarget "Simple Rsync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD31C34B24AD70780087C210 /* Debug */,
+				FD31C34C24AD70780087C210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD31C34D24AD70780087C210 /* Build configuration list for PBXNativeTarget "Simple RsyncTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD31C34E24AD70780087C210 /* Debug */,
+				FD31C34F24AD70780087C210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD31C35024AD70780087C210 /* Build configuration list for PBXNativeTarget "Simple RsyncUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD31C35124AD70780087C210 /* Debug */,
+				FD31C35224AD70780087C210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FD31C32524AD70750087C210 /* Simple_Rsync.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FD31C32624AD70750087C210 /* Simple_Rsync.xcdatamodel */,
+			);
+			currentVersion = FD31C32624AD70750087C210 /* Simple_Rsync.xcdatamodel */;
+			path = Simple_Rsync.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FD31C31624AD70750087C210 /* Project object */;
+}
