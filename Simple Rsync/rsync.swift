@@ -9,12 +9,16 @@
 import Foundation
 
 func shell() {
-    print("starting shell")
+    //print("starting shell")
+    
     let task = Process()
     let pipe = Pipe()
+    
+    var command :String = "rsync"
+    var args :Array = ["-r", "-v"]
 
     task.standardOutput = pipe
-    task.arguments = ["-c", "ls"]
+    task.arguments = ["-c", command]
     task.launchPath = "/bin/zsh"
     task.launch()
 

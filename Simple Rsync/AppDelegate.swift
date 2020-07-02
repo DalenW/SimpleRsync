@@ -30,7 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
         window.titlebarAppearsTransparent = true
-        window.minSize = NSSize(width: 600, height: 400)
+        window.minSize = NSSize(width: 800, height: 400)
         
         //print("Launched")
     }
