@@ -26,9 +26,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
             backing: .buffered, defer: false)
         window.center()
-        window.setFrameAutosaveName("Main Window")
+        window.setFrameAutosaveName("Simple Rsync")
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
+        window.titlebarAppearsTransparent = true
+        window.minSize = NSSize(width: 600, height: 400)
+        
+        //print("Launched")
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -134,3 +138,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 }
 
+
+struct AppDelegate_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
+}
