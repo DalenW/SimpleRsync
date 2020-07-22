@@ -14,8 +14,7 @@ func shell() {
     let task = Process()
     let pipe = Pipe()
     
-    var command :String = "rsync"
-    var args :Array = ["-r", "-v"]
+    var command :String = "echo Hello"
 
     task.standardOutput = pipe
     task.arguments = ["-c", command]

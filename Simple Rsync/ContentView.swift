@@ -27,17 +27,6 @@ struct ContentView: View {
                         VStack {
                             TextField("Source Folder", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
                             TextField("Destination", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                            
-                            Divider()
-                            
-                            HStack {
-                                
-                                ScrollView {
-                                    TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                                        .disabled(true)
-                                        .frame(width: 300, height: 100, alignment: .leading)
-                                }
-                            }
                         }
                         .frame(width: 300.0)
                     }
@@ -93,17 +82,21 @@ struct ContentView: View {
                 }
                 
                 Spacer()
-
-                
-                
             }
+            Spacer()
+            Console()
+                .padding(.horizontal, 20.0)
+                .frame(height: 200.0)
+            Spacer()
             
             
             Button(action: {
                 shell()
             }) {
                 Text("Run")
-            }.frame(minWidth: 400, idealWidth: 800, maxWidth: .infinity, minHeight: 300, idealHeight: 400, maxHeight: .infinity)
+            }
+            
+            Spacer()
         }
     }
 }
