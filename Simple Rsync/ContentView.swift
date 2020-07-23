@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var rsync:Rsync = Rsync()
+    
     @State private var ignoreErrorsBool = true
     
     var body: some View {
@@ -84,14 +86,23 @@ struct ContentView: View {
                 Spacer()
             }
             Spacer()
-            Console()
-                .padding(.horizontal, 20.0)
-                .frame(height: 200.0)
+            
+            ScrollView {
+                Text(self.rsync.output)
+                    .multilineTextAlignment(.leading)
+                    .lineLimit(nil)
+                    .padding(.leading, 5.0)
+                    .colorScheme(/*@START_MENU_TOKEN@*/.light/*@END_MENU_TOKEN@*/)
+            }
+            .background(Color.gray)
+            .padding(.horizontal, 20.0)
+            .frame(height: 200.0)
+            
             Spacer()
             
             
             Button(action: {
-                shell()
+                self.rsync.run()
             }) {
                 Text("Run")
             }

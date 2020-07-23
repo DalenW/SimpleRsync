@@ -8,11 +8,25 @@
 
 import SwiftUI
 
+class Helper: ObservableObject {
+    @Published var consoleText: String = ""
+    
+    init() {
+        update(text: "Empty")
+    }
+    
+    func update(text:String) {
+        self.consoleText = text
+        print("Updated the text")
+    }
+}
+
 struct Console: View {
+    @ObservedObject var helper:Helper = Helper()
     var body: some View {
         return GeometryReader { geometry in
             ScrollView {
-                Text("content")
+                Text(self.helper.consoleText)
                     .multilineTextAlignment(.leading)
                     .lineLimit(nil)
                     .padding(.leading, 5.0)

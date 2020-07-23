@@ -8,21 +8,31 @@
 
 import Foundation
 
-func shell() {
-    //print("starting shell")
+class Rsync: ObservableObject {
+    @Published var output:String = "Not run yet"
     
     let task = Process()
     let pipe = Pipe()
     
     var command :String = "echo Hello"
-
-    task.standardOutput = pipe
-    task.arguments = ["-c", command]
-    task.launchPath = "/bin/zsh"
-    task.launch()
-
-    let data = pipe.fileHandleForReading.readDataToEndOfFile()
-    let output = String(data: data, encoding: .utf8)!
     
-    print(output)
+    init() {
+        
+    }
+    
+    func run() {
+        //print("starting shell")
+        
+        task.standardOutput = pipe
+        task.arguments = ["-c", command]
+        task.launchPath = "/bin/zsh"
+        task.launch()
+
+        let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        output = String(data: data, encoding: .utf8)!
+        print(output)
+        
+    }
 }
+
+
