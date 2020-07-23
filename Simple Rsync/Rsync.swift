@@ -15,13 +15,18 @@ class Rsync: ObservableObject {
     private let task = Process()
     private let pipe = Pipe()
     
-    var command :String = ""
+    
+    
+    private var isRunning:Bool = false
     
     //MARK: - Published Variables
     @Published private var consoleOutput:String = "Not run yet"
+    @Published public var pipeData:Data = Data.init()
     
     @Published var source:String = ""
     @Published var destination:String = ""
+    
+    @Published var command:String = ""
     
     @Published var toggleRecursive:Bool    = true
     @Published var toggleUpdate:Bool       = true
@@ -51,13 +56,15 @@ class Rsync: ObservableObject {
         task.launchPath = "/bin/zsh"
         
         do {
-            //try task.run()
+            try task.run()
         } catch is Any {
             consoleOutput += "\nError running task"
         }
         
 
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        pipeData = pipe.fileHandleForReading.readDataToEndOfFile()
+        
         consoleOutput = String(data: data, encoding: .utf8)!
         print(consoleOutput)
     }
@@ -114,6 +121,10 @@ class Rsync: ObservableObject {
         
         
         print(command)
+    }
+    
+    func stopTask() {
+        task.terminate()
     }
     
     //MARK: - Getters and Setters

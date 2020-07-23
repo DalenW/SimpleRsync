@@ -25,12 +25,19 @@ struct ContentView: View {
                 
                 VStack {
                     VStack {
-                        VStack {
-                            TextField("Source Folder", text: $rsync.source)
-                            TextField("Destination", text: $rsync.destination)
+                        TextField("Source Folder", text: $rsync.source)
+                        TextField("Destination", text: $rsync.destination)
+                        
+                        Divider()
+                        
+                        TextField("Command", text: $rsync.command)
+                        Button(action: {
+                            self.rsync.generateCommand()               }) {
+                            Text("Generate Command")
                         }
-                        .frame(width: 300.0)
                     }
+                    .frame(width: 300.0)
+                    
                     
                     Spacer()
                 }
@@ -111,12 +118,19 @@ struct ContentView: View {
             
             Spacer()
             
-            
-            Button(action: {
-                self.rsync.run()
-            }) {
-                Text("Run")
+            HStack {
+                Button(action: {
+                    self.rsync.run()
+                }) {
+                    Text("Run")
+                }
+                Button(action: {
+                    self.rsync.stopTask()
+                }) {
+                    Text("Stop")
+                }
             }
+            
             
             Spacer()
         }
