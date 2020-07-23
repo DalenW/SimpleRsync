@@ -12,7 +12,7 @@ class Rsync: ObservableObject {
     @Published var output:String = "Not run yet"
     
     let task = Process()
-    let pipe = Pipe()
+    
     
     var command :String = "echo Hello"
     
@@ -21,12 +21,19 @@ class Rsync: ObservableObject {
     }
     
     func run() {
-        //print("starting shell")
+        let pipe = Pipe()
+        print(task.isRunning)
         
         task.standardOutput = pipe
         task.arguments = ["-c", command]
         task.launchPath = "/bin/zsh"
-        task.launch()
+        
+        do {
+            try task.run()
+        } catch is Any {
+            print("Error")
+        }
+        
 
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
         output = String(data: data, encoding: .utf8)!

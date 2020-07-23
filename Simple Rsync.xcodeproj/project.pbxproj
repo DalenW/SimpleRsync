@@ -16,7 +16,6 @@
 		FD31C33B24AD70780087C210 /* Simple_RsyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31C33A24AD70780087C210 /* Simple_RsyncTests.swift */; };
 		FD31C34624AD70780087C210 /* Simple_RsyncUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31C34524AD70780087C210 /* Simple_RsyncUITests.swift */; };
 		FD31C35424AD71AC0087C210 /* rsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31C35324AD71AC0087C210 /* rsync.swift */; };
-		FD51095624C802E400036463 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD51095524C802E400036463 /* Console.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +52,6 @@
 		FD31C34524AD70780087C210 /* Simple_RsyncUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_RsyncUITests.swift; sourceTree = "<group>"; };
 		FD31C34724AD70780087C210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD31C35324AD71AC0087C210 /* rsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rsync.swift; sourceTree = "<group>"; };
-		FD51095524C802E400036463 /* Console.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Console.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +111,6 @@
 				FD31C32524AD70750087C210 /* Simple_Rsync.xcdatamodeld */,
 				FD31C32A24AD70780087C210 /* Preview Content */,
 				FD31C35324AD71AC0087C210 /* rsync.swift */,
-				FD51095524C802E400036463 /* Console.swift */,
 			);
 			path = "Simple Rsync";
 			sourceTree = "<group>";
@@ -276,7 +273,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD31C32424AD70750087C210 /* ContentView.swift in Sources */,
-				FD51095624C802E400036463 /* Console.swift in Sources */,
 				FD31C35424AD71AC0087C210 /* rsync.swift in Sources */,
 				FD31C32224AD70750087C210 /* AppDelegate.swift in Sources */,
 				FD31C32724AD70750087C210 /* Simple_Rsync.xcdatamodeld in Sources */,

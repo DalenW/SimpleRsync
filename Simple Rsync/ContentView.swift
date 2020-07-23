@@ -87,16 +87,20 @@ struct ContentView: View {
             }
             Spacer()
             
-            ScrollView {
-                Text(self.rsync.output)
-                    .multilineTextAlignment(.leading)
-                    .lineLimit(nil)
-                    .padding(.leading, 5.0)
-                    .colorScheme(/*@START_MENU_TOKEN@*/.light/*@END_MENU_TOKEN@*/)
-            }
-            .background(Color.gray)
-            .padding(.horizontal, 20.0)
-            .frame(height: 200.0)
+            GeometryReader { geometry in
+                    ScrollView {
+                        Text(self.rsync.output)
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(nil)
+                            .padding(.leading, 5.0)
+                            .colorScheme(/*@START_MENU_TOKEN@*/.light/*@END_MENU_TOKEN@*/)
+                            .frame(width: geometry.size.width)
+                    }
+                    .background(Color.gray)
+                    
+                }.padding(.horizontal, 20.0)
+            
+            
             
             Spacer()
             
