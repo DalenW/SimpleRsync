@@ -15,7 +15,7 @@
 		FD31C32F24AD70780087C210 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD31C32D24AD70780087C210 /* Main.storyboard */; };
 		FD31C33B24AD70780087C210 /* Simple_RsyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31C33A24AD70780087C210 /* Simple_RsyncTests.swift */; };
 		FD31C34624AD70780087C210 /* Simple_RsyncUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31C34524AD70780087C210 /* Simple_RsyncUITests.swift */; };
-		FD31C35424AD71AC0087C210 /* rsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31C35324AD71AC0087C210 /* rsync.swift */; };
+		FDA7BCEF24C960BD0004D212 /* Rsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7BCEE24C960BD0004D212 /* Rsync.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,7 @@
 		FD31C34124AD70780087C210 /* Simple RsyncUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple RsyncUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD31C34524AD70780087C210 /* Simple_RsyncUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_RsyncUITests.swift; sourceTree = "<group>"; };
 		FD31C34724AD70780087C210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD31C35324AD71AC0087C210 /* rsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rsync.swift; sourceTree = "<group>"; };
+		FDA7BCEE24C960BD0004D212 /* Rsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rsync.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,13 +104,13 @@
 			children = (
 				FD31C32124AD70750087C210 /* AppDelegate.swift */,
 				FD31C32324AD70750087C210 /* ContentView.swift */,
+				FDA7BCEE24C960BD0004D212 /* Rsync.swift */,
 				FD31C32824AD70780087C210 /* Assets.xcassets */,
 				FD31C32D24AD70780087C210 /* Main.storyboard */,
 				FD31C33024AD70780087C210 /* Info.plist */,
 				FD31C33124AD70780087C210 /* Simple_Rsync.entitlements */,
 				FD31C32524AD70750087C210 /* Simple_Rsync.xcdatamodeld */,
 				FD31C32A24AD70780087C210 /* Preview Content */,
-				FD31C35324AD71AC0087C210 /* rsync.swift */,
 			);
 			path = "Simple Rsync";
 			sourceTree = "<group>";
@@ -273,7 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD31C32424AD70750087C210 /* ContentView.swift in Sources */,
-				FD31C35424AD71AC0087C210 /* rsync.swift in Sources */,
+				FDA7BCEF24C960BD0004D212 /* Rsync.swift in Sources */,
 				FD31C32224AD70750087C210 /* AppDelegate.swift in Sources */,
 				FD31C32724AD70750087C210 /* Simple_Rsync.xcdatamodeld in Sources */,
 			);

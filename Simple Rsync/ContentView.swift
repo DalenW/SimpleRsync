@@ -11,7 +11,6 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var rsync:Rsync = Rsync()
     
-    @State private var ignoreErrorsBool = true
     
     var body: some View {
         VStack {
@@ -19,7 +18,7 @@ struct ContentView: View {
                 .font(.title)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
-                .padding(.vertical, 10.0)
+                .padding(.bottom, 10.0)
             
             HStack(spacing: 2) {
                 Spacer()
@@ -33,6 +32,7 @@ struct ContentView: View {
                         .frame(width: 300.0)
                     }
                     
+                    Spacer()
                 }
                 
                 Spacer()
@@ -44,38 +44,38 @@ struct ContentView: View {
                         .font(.headline)
                     HStack {
                         VStack(alignment: .leading) {
-                            Toggle(isOn: $ignoreErrorsBool) {
+                            Toggle(isOn: $rsync.toggleIgnoreErrors) {
                                 Text("Ignore Errors")
                             }
-                            Toggle(isOn: $ignoreErrorsBool) {
+                            Toggle(isOn: $rsync.toggleRecursive) {
                                 Text("Recursive")
                             }
-                            Toggle(isOn: $ignoreErrorsBool) {
+                            Toggle(isOn: $rsync.toggleUpdate) {
                                 Text("Update")
                             }
-                            Toggle(isOn: $ignoreErrorsBool) {
+                            Toggle(isOn: $rsync.toggleCompress) {
                                 Text("Compress")
                             }
-                            Toggle(isOn: $ignoreErrorsBool) {
+                            Toggle(isOn: $rsync.toggleProgress) {
                                 Text("Partial Progress")
                             }
                             
                         }
                         
                         VStack(alignment: .leading) {
-                            Toggle(isOn: $ignoreErrorsBool) {
+                            Toggle(isOn: $rsync.togglePermissions) {
                                 Text("Preserve Permissions")
                             }
-                            Toggle(isOn: $ignoreErrorsBool) {
+                            Toggle(isOn: $rsync.toggleTimes) {
                                 Text("Preserve Times")
                             }
-                            Toggle(isOn: $ignoreErrorsBool) {
+                            Toggle(isOn: $rsync.toggleGroup) {
                                 Text("Preserve Group")
                             }
-                            Toggle(isOn: $ignoreErrorsBool) {
+                            Toggle(isOn: $rsync.toggleOwner) {
                                 Text("Preserve Owner")
                             }
-                            Toggle(isOn: $ignoreErrorsBool) {
+                            Toggle(isOn: $rsync.toggleArchive) {
                                 Text("Archive")
                             }
                         }
@@ -89,7 +89,7 @@ struct ContentView: View {
             
             GeometryReader { geometry in
                     ScrollView {
-                        Text(self.rsync.output)
+                        Text(self.rsync.getConsoleOutput())
                             .multilineTextAlignment(.leading)
                             .lineLimit(nil)
                             .padding(.leading, 5.0)
