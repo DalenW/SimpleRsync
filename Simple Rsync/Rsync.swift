@@ -112,6 +112,7 @@ class Rsync: ObservableObject {
         command += " '" + source + "'"
         command += " '" + destination + "'"
         
+        
         print(command)
     }
     
