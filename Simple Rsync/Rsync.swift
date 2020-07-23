@@ -11,6 +11,13 @@ import Foundation
 import Foundation
 
 class Rsync: ObservableObject {
+    
+    private let task = Process()
+    private let pipe = Pipe()
+    
+    var command :String = ""
+    
+    //MARK: - Published Variables
     @Published private var consoleOutput:String = "Not run yet"
     
     @Published var toggleIgnoreErrors:Bool = true
@@ -24,19 +31,15 @@ class Rsync: ObservableObject {
     @Published var toggleOwner:Bool = false
     @Published var toggleArchive:Bool = false
     
-    let task = Process()
-    
-    
-    var command :String = "echo Hello"
     
     init() {
         
     }
     
-    //MARK: - Core function
+    //MARK: - Core functions
     func run() {
-        let pipe = Pipe()
-        //print(task.isRunning)
+        generateCommand()
+        
         
         task.standardOutput = pipe
         task.arguments = ["-c", command]
@@ -45,14 +48,19 @@ class Rsync: ObservableObject {
         do {
             try task.run()
         } catch is Any {
-            print("Error")
+            consoleOutput += "\nError running task"
         }
         
 
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        self.consoleOutput = String(data: data, encoding: .utf8)!
-        print(self.consoleOutput)
-        
+        consoleOutput = String(data: data, encoding: .utf8)!
+        print(consoleOutput)
+    }
+    
+    func generateCommand() {
+        if command.isEmpty {
+            command = "echo Test"
+        }
     }
     
     //MARK: - Getters and Setters
