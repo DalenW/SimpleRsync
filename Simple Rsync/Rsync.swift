@@ -20,16 +20,21 @@ class Rsync: ObservableObject {
     //MARK: - Published Variables
     @Published private var consoleOutput:String = "Not run yet"
     
+    @Published var source:String = ""
+    @Published var destination:String = ""
+    
+    @Published var toggleRecursive:Bool    = true
+    @Published var toggleUpdate:Bool       = true
+    @Published var toggleCompress:Bool     = false
+    @Published var toggleProgress:Bool     = true
+    @Published var togglePermissions:Bool  = false
+    @Published var toggleTimes:Bool        = true
+    @Published var toggleGroup:Bool        = false
+    @Published var toggleOwner:Bool        = false
+    @Published var toggleReadable:Bool     = true
     @Published var toggleIgnoreErrors:Bool = true
-    @Published var toggleRecursive:Bool = true
-    @Published var toggleUpdate:Bool = true
-    @Published var toggleCompress:Bool = false
-    @Published var toggleProgress:Bool = true
-    @Published var togglePermissions:Bool = false
-    @Published var toggleTimes:Bool = true
-    @Published var toggleGroup:Bool = false
-    @Published var toggleOwner:Bool = false
-    @Published var toggleArchive:Bool = false
+    @Published var toggleStats:Bool        = true
+    
     
     
     init() {
@@ -46,7 +51,7 @@ class Rsync: ObservableObject {
         task.launchPath = "/bin/zsh"
         
         do {
-            try task.run()
+            //try task.run()
         } catch is Any {
             consoleOutput += "\nError running task"
         }
@@ -58,9 +63,56 @@ class Rsync: ObservableObject {
     }
     
     func generateCommand() {
-        if command.isEmpty {
-            command = "echo Test"
+        command = "rsync --verbose"
+        
+        if toggleRecursive {
+            command += " --recursive"
         }
+        
+        if toggleUpdate {
+            command += " --update"
+        }
+        
+        if toggleCompress {
+            command += " --compress"
+        }
+        
+        if toggleProgress {
+            command += " --partial --progress"
+        }
+        
+        if togglePermissions {
+            command += " --perms"
+        }
+        
+        if toggleTimes {
+            command += " --times"
+        }
+        
+        if toggleGroup {
+            command += " --group"
+        }
+        
+        if toggleOwner {
+            command += " --owner"
+        }
+        
+        if toggleReadable {
+            command += " --human-readable"
+        }
+        
+        if toggleIgnoreErrors {
+            command += " --ignore-errors"
+        }
+        
+        if toggleStats {
+            command += " --stats"
+        }
+        
+        command += " '" + source + "'"
+        command += " '" + destination + "'"
+        
+        print(command)
     }
     
     //MARK: - Getters and Setters

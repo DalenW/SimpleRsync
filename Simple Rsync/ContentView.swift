@@ -26,8 +26,8 @@ struct ContentView: View {
                 VStack {
                     VStack {
                         VStack {
-                            TextField("Source Folder", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                            TextField("Destination", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                            TextField("Source Folder", text: $rsync.source)
+                            TextField("Destination", text: $rsync.destination)
                         }
                         .frame(width: 300.0)
                     }
@@ -44,9 +44,6 @@ struct ContentView: View {
                         .font(.headline)
                     HStack {
                         VStack(alignment: .leading) {
-                            Toggle(isOn: $rsync.toggleIgnoreErrors) {
-                                Text("Ignore Errors")
-                            }
                             Toggle(isOn: $rsync.toggleRecursive) {
                                 Text("Recursive")
                             }
@@ -59,7 +56,12 @@ struct ContentView: View {
                             Toggle(isOn: $rsync.toggleProgress) {
                                 Text("Partial Progress")
                             }
-                            
+                            Toggle(isOn: $rsync.toggleReadable) {
+                                Text("Human Readable")
+                            }
+                            Toggle(isOn: $rsync.toggleIgnoreErrors) {
+                                Text("Ignore Errors")
+                            }
                         }
                         
                         VStack(alignment: .leading) {
@@ -75,9 +77,11 @@ struct ContentView: View {
                             Toggle(isOn: $rsync.toggleOwner) {
                                 Text("Preserve Owner")
                             }
-                            Toggle(isOn: $rsync.toggleArchive) {
-                                Text("Archive")
+                            Toggle(isOn: $rsync.toggleStats) {
+                                Text("Stats")
                             }
+                            
+                            Spacer()
                         }
                     }.frame(width: 300.0)
                     Spacer()
@@ -88,17 +92,20 @@ struct ContentView: View {
             Spacer()
             
             GeometryReader { geometry in
-                    ScrollView {
-                        Text(self.rsync.getConsoleOutput())
-                            .multilineTextAlignment(.leading)
-                            .lineLimit(nil)
-                            .padding(.leading, 5.0)
-                            .colorScheme(/*@START_MENU_TOKEN@*/.light/*@END_MENU_TOKEN@*/)
-                            .frame(width: geometry.size.width)
-                    }
-                    .background(Color.gray)
-                    
-                }.padding(.horizontal, 20.0)
+                ScrollView {
+                    Text(self.rsync.getConsoleOutput())
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(nil)
+                        .padding(.leading, 5.0)
+                        .colorScheme(/*@START_MENU_TOKEN@*/.light/*@END_MENU_TOKEN@*/)
+                        .frame(width: geometry.size.width)
+                        
+        
+                }
+                .background(Color.gray)
+            }
+            .padding(.horizontal, 20.0)
+            .frame(minWidth: 50, minHeight: 100)
             
             
             
